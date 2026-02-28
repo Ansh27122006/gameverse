@@ -1,16 +1,94 @@
-# React + Vite
+# 🎮 GameVerse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A collection of 10 classic games built with React, Tailwind CSS, and Vanilla JavaScript. No login required — just open and play!
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [gameverse-play.vercel.app](https://gameverse-play.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🕹️ Games
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Game | Category | Description |
+|------|----------|-------------|
+| 🐍 Snake | Arcade | Eat food, grow longer, don't hit the walls |
+| 🟦 Tetris | Arcade | Stack falling blocks and clear lines |
+| 🐦 Flappy Bird | Arcade | Tap to fly and dodge the pipes |
+| 🔢 2048 | Puzzle | Slide tiles and reach 2048 |
+| 📝 Wordle | Puzzle | Guess the 5-letter word in 6 tries |
+| 🃏 Memory Card | Puzzle | Find all matching pairs |
+| 🧱 Breakout | Arcade | Smash all bricks with your ball |
+| 💣 Minesweeper | Strategy | Clear the board without hitting a mine |
+| ❌ Tic Tac Toe | Strategy | Classic X and O battle |
+| ✊ Rock Paper Scissors | Classic | Beat the computer |
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- 🎯 10 fully playable games
+- 📱 Fully responsive — works on mobile and desktop
+- 💾 High scores saved with localStorage
+- 🏆 Difficulty levels on most games
+- 💬 Feedback system — rate games, suggest new ones, report bugs
+- 🔍 Search and filter games by category
+- ⚡ No login, no signup — instant access
+
+---
+
+## 🛠️ Tech Stack
+
+- **React** — component architecture and routing
+- **Tailwind CSS** — styling and responsive layout
+- **Vanilla JavaScript** — game logic
+- **Canvas API** — Snake, Tetris, Flappy Bird, Breakout
+- **React Router** — page navigation
+- **localStorage** — score persistence
+- **Google Sheets + Apps Script** — feedback collection
+
+---
+
+## 🏗️ Project Structure
+```
+src/
+├── components/       # Reusable UI components
+├── games/            # Individual game folders
+│   ├── Snake/
+│   ├── Tetris/
+│   ├── Flappy/
+│   ├── Game2048/
+│   ├── Wordle/
+│   ├── Memory/
+│   ├── Breakout/
+│   ├── Minesweeper/
+│   ├── TicTacToe/
+│   └── RPS/
+├── pages/            # Home, GamePage, Feedback
+└── data/             # games.js — single source of truth
+```
+
+---
+
+## 🚀 Run Locally
+```bash
+git clone https://github.com/YOURUSERNAME/gameverse.git
+cd gameverse
+npm install
+npm run dev
+```
+
+---
+
+## 💡 Architecture Decisions
+- Each game has a `.jsx` wrapper and `.js` logic file — keeping React and game logic separated
+- `games.js` is the single source of truth — adding a new game only requires one new entry here
+- Canvas API used for physics-based games (Snake, Tetris, Flappy, Breakout) for smooth 60fps rendering
+- `useRef` used for game state instead of `useState` to prevent unnecessary re-renders during game loops
+
+---
+
+## 📬 Feedback
+Have a suggestion or found a bug? Visit the [Feedback page](https://gameverse-play.vercel.app/feedback)!
+
+---
+
+Made with ❤️ by [Ansh Preet Kaur](https://github.com/Ansh27122006)
